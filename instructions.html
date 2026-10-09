@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instructions — Project Scoping Tool (PST) Preview</title>
+  <meta name="description" content="Static design preview of the PST Instructions page, for team review only." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a id="top"></a>
+
+  <!-- ============================================================= -->
+  <!-- Header                                                         -->
+  <!-- ============================================================= -->
+  <header class="site-header">
+    <div class="site-wrap header-inner">
+      <a class="brand" href="index.html#top" aria-label="Project Scoping Tool home">
+        <span class="brand-title">Project Scoping Tool</span>
+        <span class="brand-subtitle">University of Nevada, Las Vegas</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html#top" class="nav-link">Home</a>
+        <a href="instructions.html#top" class="nav-link nav-link-active">Instructions</a>
+      </nav>
+
+      <a href="#" class="btn btn-primary btn-small js-inert-link">Open Tool</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============================================================= -->
+    <!-- Intro + jurisdiction selector                                 -->
+    <!-- ============================================================= -->
+    <section class="site-section site-section-alt">
+      <div class="site-wrap">
+        <h2 class="section-heading">Instructions</h2>
+        <p class="section-intro" style="margin-bottom: 20px;">
+          Instructions and resources vary by jurisdiction. Select a
+          jurisdiction below to view the instructions for each question.
+        </p>
+
+        <div class="jurisdiction-select-wrap">
+          <select id="jurisdiction-select" class="jurisdiction-select" aria-label="Select a jurisdiction">
+            <option value="" selected disabled>Select a jurisdiction</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================= -->
+    <!-- Questions (populated by JS once a jurisdiction is selected)   -->
+    <!-- ============================================================= -->
+    <section id="questions-section" class="site-section" hidden>
+      <div class="site-wrap" id="questions-wrap"></div>
+    </section>
+  </main>
+
+  <!-- ============================================================= -->
+  <!-- Footer                                                         -->
+  <!-- ============================================================= -->
+  <footer class="site-footer">
+    <div class="site-wrap footer-inner">
+      <div class="footer-brand">
+        <p class="footer-title">Project Scoping Tool (PST)</p>
+        <p class="footer-subtitle">University of Nevada, Las Vegas</p>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-meta">
+        <span class="footer-contact">
+          Contact: <a href="mailto:vru@unlv.edu" class="inline-link inline-link-dark">vru@unlv.edu</a>
+        </span>
+        <span class="footer-copyright">© 2026 All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+  <script src="js/instructions-data.js"></script>
+  <script src="js/instructions.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
